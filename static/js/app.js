@@ -11,17 +11,24 @@ jsondata.then(function(x) //to see the data
     console.log(x.samples.length);
     console.log(x.samples[0]);*/
 
+    let dropdownValues = []
+    for (let i=0; i < x.samples.length; i++){
+        dropdownValues.push(x.names[i])
+    }
 
-    d3.select("#selDataset").on("change", optionChanged)
+    let dropdownMenu = document.getElementById("selDataset");
+    for (let value of dropdownValues) {
+        let option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+        dropdownMenu.appendChild(option);
+    }
 
     function optionChanged(individual) {
         //let individual = d3.select("#selDataset")
-
         for (let i=0; i < x.samples.length; i++){ // i = each individual
             //console.log(x.samples[i])
-
             if (individual === x.samples[i].otu_ids){
-
                 let labels = x.samples[i].otu_labels.slice(0, 10);
                 let ids = x.samples[i].otu_ids.slice(0, 10);
                 let values = x.samples[i].sample_values.slice(0, 10);
@@ -48,6 +55,9 @@ jsondata.then(function(x) //to see the data
                 Plotly.newPlot("individualData", top10OTUsGraph, layout)}
         }
     }
+
+
+    d3.select("#selDataset").on("change", optionChanged)
 
     
 
