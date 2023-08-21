@@ -51,15 +51,30 @@ function optionChanged(individual){
             type: "bar",
             orientation: "h"
         }
-
         let top10OTUsGraph = [top10OTUsGraphTrace]
+
+        let bubble = {
+            x: ids,
+            y: values,
+            
+            text: labels,
+            mode: "markers", // markers mode for bubble chart
+            marker: {
+                size: values, // size of bubbles
+                color: ids // color scale for bubbles
+            }
+        }
+        let bubbleGraph = [bubble]
+        
 
         let layout = {
             width: 800, 
             height: 400, 
         }
-
-        Plotly.newPlot("individualData", top10OTUsGraph, layout)}
+        
+        Plotly.newPlot("individualData", top10OTUsGraph, layout)
+        Plotly.newPlot("bubbleData", bubbleGraph)}
+        
     }
 
 
