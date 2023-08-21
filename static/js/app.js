@@ -40,15 +40,15 @@ function optionChanged(individual){
         let demographicInfo = document.getElementById("sample-metadata");
         
             
-            console.log(demoinfo[index])
-            for (let key in demoinfo[index]){
-                // console.log(key)
-                // console.log(meta[key])
-                let item = document.createElement("p");
-                console.log(`${key}: ${demoinfo[index][key]}`)
-                item.textContent = `${key}: ${demoinfo[index][key]}`
-                demographicInfo.appendChild(item);
-            }
+        //console.log(demoinfo[index])
+        for (let key in demoinfo[index]){
+            // console.log(key)
+            // console.log(meta[key])
+            let item = document.createElement("p");
+            console.log(`${key}: ${demoinfo[index][key]}`)
+            item.textContent = `${key}: ${demoinfo[index][key]}`
+            demographicInfo.appendChild(item);
+        }
             
             
         
