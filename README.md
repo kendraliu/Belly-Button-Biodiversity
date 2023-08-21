@@ -20,6 +20,9 @@ Express.js: A web application framework used for serving the dashboard on a loca
 Dataset
 The Belly Button Biodiversity dataset contains information about the microbial species found in human navels. The dataset is stored in the samples.json file and is loaded into the dashboard for analysis.
 
+## Future Improvements
+Due to time constraint, there are still a lot of this project that can be better, including the layout of the whole website, the very crude chart, and the (aesthetics of) labels.
+
 ## Credits
 The Belly Button Biodiversity Dashboard project is based on the data provided by the Belly Button Biodiversity Study. 
 
@@ -32,4 +35,3 @@ D3.js Documentation
 Plotly.js Documentation
 React Documentation
 Express.js Documentation
-Screenshots
